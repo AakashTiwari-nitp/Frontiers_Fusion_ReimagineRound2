@@ -1,17 +1,9 @@
-
-import './App.css';
+import PayBills from "./Components/PayBills";
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-         hello guys
-        </p>
-        
-      </header>
-    </div>
+    <PayBills />
   );
 }
 
