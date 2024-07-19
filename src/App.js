@@ -8,14 +8,14 @@ import "./index.css";
 
 function App() {
   return (
-    <>
+    <div className="bg-[#111]">
       <Navbar />
       <HeroSection />
       <PayBills />
       <RechargeSection />
       <BSNLApp />
       <Footer />
-    </>
+    </div>
   );
 }
 
