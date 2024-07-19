@@ -1,9 +1,13 @@
 import PayBills from "./Components/PayBills";
-import './index.css';
+import RechargeSection from "./Components/RechargeSection";
+import "./index.css";
 
 function App() {
   return (
-    <PayBills />
+    <>
+      <PayBills />
+      <RechargeSection />
+    </>
   );
 }
 
