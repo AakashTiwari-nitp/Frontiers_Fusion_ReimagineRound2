@@ -9,7 +9,7 @@ function RechargeSection() {
 
   const prepaidPlans = [
     { pm: 239, price: 3599, validity: "365 Days", data: "2.5GB/Day" },
-    { pm: 175, price: 2399, validity: "365 Days", data: "1.5GB/Day" },
+    { pm: 175, price: 2499, validity: "365 Days", data: "1.5GB/Day" },
     { pm: 276, price: 1599, validity: "365 Days", data: "2.5GB/Day" },
   ];
 
