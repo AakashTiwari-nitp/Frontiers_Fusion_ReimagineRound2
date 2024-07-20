@@ -15,7 +15,7 @@ function PayBills() {
       </h1>
       <button className="px-2 mx-2 py-1 mt-2 text-[#FFFFFF] border-b-[3px]"><img src={mobilesvg} className="inline-block  px-2" alt="" />Mobile</button>
       <button className="px-2 mx-2 py-1 mt-2 text-[#FFFFFF9A]"><img src={fibersvg} className="inline-block  px-2" alt="" />Fiber</button>
-      <div className="bg-[#4C3DFF9A] w-5/12 m-auto rounded-xl mt-4 py-5 px-20">
+      <div className="bg-[#4C3DFF9A] lg:w-5/12 md:w-1/2 sm:w-3/5 w-4/5 m-auto rounded-xl mt-4 py-5 lg:px-20 md:px-10 px-5">
         <div className="bg-[#0C0093] w-fit rounded-full">
           <button className="px-4 py-1 bg-[#111] rounded-full"><img src={prepaidsvg} className="inline-block pr-1" alt="" />Prepaid</button>
           <button className="px-4 py-1">Postpaid</button>
@@ -31,7 +31,7 @@ function PayBills() {
       </div>
 
       <h1 className="mt-10 text-white text-center text-2xl font-bold tracking-wide">Buy a New Connection</h1>
-      <div className="m-auto flex gap-5 mt-5 w-fit">
+      <div className="m-auto flex gap-5 mt-5 w-fit flex-wrap justify-evenly">
         <div className="bg-black w-32 h-32 py-2">
             <div className="w-20 h-20 m-auto">
                 <img src={bsnlsim} className="w-full h-full cover" alt="" />

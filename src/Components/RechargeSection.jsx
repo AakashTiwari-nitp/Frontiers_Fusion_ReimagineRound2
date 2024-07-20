@@ -8,7 +8,7 @@ function RechargeSection() {
         <button className="px-3 py-1 text-lg font-semibold bg-black rounded-lg mx-5 mt-4">Individual Plans</button>
         <button className="px-3 py-1 text-lg font-semibold bg-[#D9D9D9] text-black rounded-lg mx-5 mt-4">Family Plans</button>
       </div>
-      <div className="w-full bg-[#111] text-white flex justify-evenly">
+      <div className="w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5">
         <div className="w-64 h-64 p-2 bg-[#1E1E1E] rounded-lg text-center">
           <h1 className="bg-blue-600 p-1 ml-3 mt-2 mr-20 rounded-md">
             Only 276/Month
@@ -85,7 +85,7 @@ function RechargeSection() {
       <div className="text-center text-white mt-10 mb-10">
         <h1 className="text-3xl font-extrabold">Best Prepaid Plans</h1>
       </div>
-      <div className="w-full bg-[#111] text-white flex justify-evenly">
+      <div className="w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5">
         <div className="w-64 h-64 p-2 bg-[#1E1E1E] rounded-lg text-center">
           <h1 className="bg-blue-600 p-1 ml-3 mt-2 mr-20 rounded-md">
             Only 276/Month
