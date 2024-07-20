@@ -6,13 +6,15 @@ import p2 from "../assets/p2.jpg";
 import p3 from "../assets/p3.png";
 import p4 from "../assets/p4.jpg";
 import p5 from "../assets/p5.jpg";
+import p6 from "../assets/p6.png";
+import p7 from "../assets/p7.png";
+import p8 from "../assets/p8.png";
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const images = [p1, p2, p3, p4, p5];
-
+const images = [p1, p2, p3, p4, p5, p6, p7, p8];
 function HeroSection() {
   const sliderRef = useRef(null);
 
