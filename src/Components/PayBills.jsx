@@ -5,6 +5,7 @@ import portsim from "../assets/portsim.svg";
 import fancyno from "../assets/fancy.svg";
 import mobilesvg from "../assets/mobilesvg.svg";
 import fibersvg from "../assets/fibersvg.svg";
+import prepaidsvg from "../assets/prepaidsvg.svg";
 
 function PayBills() {
   return (
@@ -12,11 +13,11 @@ function PayBills() {
       <h1 className="text-white text-center text-3xl font-extrabold tracking-wide">
         Recharge or Pay Bills
       </h1>
-      <button className="px-2 mx-2 py-1 mt-2 text-[#FFFFFF]"><img src={mobilesvg} className="inline-block  px-2" alt="" />Mobile</button>
+      <button className="px-2 mx-2 py-1 mt-2 text-[#FFFFFF] border-b-[3px]"><img src={mobilesvg} className="inline-block  px-2" alt="" />Mobile</button>
       <button className="px-2 mx-2 py-1 mt-2 text-[#FFFFFF9A]"><img src={fibersvg} className="inline-block  px-2" alt="" />Fiber</button>
       <div className="bg-[#4C3DFF9A] w-5/12 m-auto rounded-xl mt-4 py-5 px-20">
         <div className="bg-[#0C0093] w-fit rounded-full">
-          <button className="px-4 py-1 bg-[#111] rounded-full">Prepaid</button>
+          <button className="px-4 py-1 bg-[#111] rounded-full"><img src={prepaidsvg} className="inline-block pr-1" alt="" />Prepaid</button>
           <button className="px-4 py-1">Postpaid</button>
         </div>
         <input

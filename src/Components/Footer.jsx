@@ -1,5 +1,9 @@
 import React from "react";
 import bsnlLogo from "../assets/logobsnl.png";
+import supportsvg from "../assets/supportsvg.svg";
+import chatsvg from "../assets/chatsvg.svg";
+import callsvg from "../assets/callsvg.svg";
+import storesvg from "../assets/storesvg.svg";
 
 function Footer() {
   return (
@@ -8,10 +12,10 @@ function Footer() {
             <h1 className="text-5xl font-extrabold tracking-wide">Need a Guidance?</h1>
             <h2 className="text-xl mt-2">It's Our Pleasure to help You!</h2>
             <div className="flex justify-around py-5">
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">Support</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">Chat with Us</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">Call Us</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">Store</h2>
+                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><img src={supportsvg} className="inline-block pr-1 py-1" alt="" />Support</h2>
+                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><img src={chatsvg} className="inline-block pr-1 py-1" alt="" />Chat with Us</h2>
+                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><img src={callsvg} className="inline-block pr-1 py-1" alt="" />Call Us</h2>
+                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><img src={storesvg} className="inline-block pr-1 py-1" alt="" />Store</h2>
             </div>
         </div>
       <div className=" w-full flex justify-around pt-5 pb-10">

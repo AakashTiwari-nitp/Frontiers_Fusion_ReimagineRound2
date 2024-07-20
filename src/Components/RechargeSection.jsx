@@ -2,7 +2,7 @@ import React from "react";
 
 function RechargeSection() {
   return (
-    <div className="w-full h-screen bg-[#111]">
+    <div className="w-full h-fit bg-[#111]">
       <div className="text-center text-white mb-10">
         <h1 className="text-3xl font-extrabold">Best Postpaid Plans</h1>
         <button className="px-3 py-1 text-lg font-semibold bg-black rounded-lg mx-5 mt-4">Individual Plans</button>
