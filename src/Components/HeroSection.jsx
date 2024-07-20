@@ -38,46 +38,20 @@ function HeroSection() {
     const handleMouseMove = (e) => {
       if (!isDragging) return;
       const deltaX = e.clientX - startX;
-      const sensitivity = 0.5; // Adjust this value to change rotation speed
+      const sensitivity = 0.3;
       const newRotation = rotationY + deltaX * sensitivity;
       setRotationY(newRotation);
       setStartX(e.clientX);
     };
 
-    // const handleTouchStart = (e) => {
-    //   setIsDragging(true);
-    //   setStartX(e.touches[0].clientX);
-    //   slider.style.cursor = "grabbing";
-    // };
-
-    // const handleTouchEnd = () => {
-    //   setIsDragging(false);
-    //   slider.style.cursor = "grab";
-    // };
-
-    // const handleTouchMove = (e) => {
-    //   if (!isDragging) return;
-    //   const deltaX = e.touches[0].clientX - startX;
-    //   const sensitivity = 0.5; // Adjust this value to change rotation speed
-    //   const newRotation = rotationY + deltaX * sensitivity;
-    //   setRotationY(newRotation);
-    //   // setStartX(e.touches[0].clientX);
-    // };
-
     banner.addEventListener("mousedown", handleMouseDown);
     banner.addEventListener("mouseup", handlemouseup);
     banner.addEventListener("mousemove", handleMouseMove);
-    // banner.addEventListener("touchstart", handleTouchStart);
-    // banner.addEventListener("touchend", handleTouchEnd);
-    // banner.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       banner.removeEventListener("mousedown", handleMouseDown);
       banner.removeEventListener("mouseup", handlemouseup);
       banner.removeEventListener("mousemove", handleMouseMove);
-      // banner.removeEventListener("touchstart", handleTouchStart);
-      // banner.removeEventListener("touchend", handleTouchEnd);
-      // banner.removeEventListener("touchmove", handleTouchMove);
     };
   }, [isDragging, startX, rotationY]);
 
