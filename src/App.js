@@ -1,16 +1,22 @@
-
-import './App.css';
+import BSNLApp from "./Components/BSNLApp";
+import Footer from "./Components/Footer";
+import HeroSection from "./Components/HeroSection";
+import PayBills from "./Components/PayBills";
+import RechargeSection from "./Components/RechargeSection";
+import Navbar from "./Components/Navbar/Navbar";
+import "./index.css";
+import OfferSection from "./Components/OfferSection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-         hello guys
-        </p>
-        
-      </header>
+    <div className="bg-[#111] overflow-hidden">
+      <Navbar />
+      <HeroSection />
+      <PayBills />
+      <RechargeSection />
+      <OfferSection />
+      <BSNLApp />
+      <Footer />
     </div>
   );
 }
