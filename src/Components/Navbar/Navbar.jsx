@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import bsnlLogo from "../../assets/logobsnl.png";
 import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
+  const navlinks = [
+    { name: "Home", dropdown: [{ link: "Company" }, { link: "HRD" }, { link: "Others" }] },
+    {
+      name: "About Us",
+      dropdown: [{ link: "Company" }, { link: "HRD" }, { link: "Others" }],
+    },
+    {
+      name: "Landline & data",
+      dropdown: [{ link: "Usage" }, { link: "Data" }, { link: "Speed Test" }],
+    },
+    {
+      name: "Mobile & data",
+      dropdown: [{ link: "Usage" }, { link: "Data" }, { link: "Speed Test" }],
+    },
+    {
+      name: "Ent. Services",
+      dropdown: [{ link: "SetUp Box" }, { link: "Plans" }],
+    },
+  ];
+
+  const [show, setShow] = useState(0);
+
+  const handleMenuClick = () => {
+    setShow(!show);
+  };
+
   return (
     <div className="w-full h-32 bg-[#111] pt-2">
       <div className="navbar-container flex justify-between lg:gap-16 items-center py-2 w-full px-10 m-auto">
@@ -12,60 +39,25 @@ const Navbar = () => {
         </a>
         <div className="navbar-menu flex-1 hidden lg:block">
           <ul className="menu-list flex justify-end">
-            <li>
-              <a href="#" className="menu relative block px-4 py-2 text-white">
-                <h2 className="menu-title text-md font-bold">Home</h2>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="menu relative block px-4 py-2 text-white">
-                <h2 className="menu-title text-md font-bold">About Us</h2>
-                <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
-                  <li>Company</li>
-                  <li>HRD</li>
-                  <li>Others</li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="menu relative block px-4 py-2 text-white">
-                <h2 className="menu-title text-md font-bold">
-                  Landline & data
-                </h2>
-                <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
-                  <li>Kevin</li>
-                  <li>Jim</li>
-                  <li>Andy</li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="menu relative block px-4 py-2 text-white">
-                <h2 className="menu-title text-md font-bold">Mobile & data</h2>
-                <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
-                  <li>Bench</li>
-                  <li>Pizza</li>
-                  <li>Honda CB125</li>
-                  <li>Space</li>
-                  <li>Black matter</li>
-                  <li>Apple</li>
-                  <li>Philodendron</li>
-                  <li>Liver</li>
-                  <li>Brass</li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="menu relative block px-4 py-2 text-white">
-                <h2 className="menu-title text-md font-bold">Ent. Services</h2>
-                <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
-                  <li>Godzilla</li>
-                  <li>Man on Wire</li>
-                  <li>Spirited Away</li>
-                  <li>Interstellar</li>
-                </ul>
-              </a>
-            </li>
+            {navlinks.map((elem, index) => {
+              return (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="menu relative block px-4 py-2 text-white"
+                  >
+                    <h2 className="menu-title text-md font-bold">
+                      {elem.name}
+                    </h2>
+                    <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
+                      {elem.dropdown.map((e, ind) => {
+                        return <li key={ind}>{e.link}</li>;
+                      })}
+                    </ul>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="navbar-right flex">
@@ -77,10 +69,35 @@ const Navbar = () => {
           </button>
           <button
             className="menu-toggle block lg:hidden text-white"
-            aria-label="Toggle menu"
+            aria-label="Toggle menu" onClick={handleMenuClick}
           >
-            <CiMenuBurger size={"1.75em"} />
+            {show? <IoMdClose size={"1.75em"} /> : <CiMenuBurger size={"1.75em"} />}
           </button>
+        </div>
+      </div>
+      <div className={`absolute right-0 bg-[#ffffff9a] ${show? "block": "hidden"} w-fit`}>
+        <div className="navbar-menu flex-1">
+          <ul className="menu-list flex flex-col justify-end">
+            {navlinks.map((elem, index) => {
+              return (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="menu relative block px-4 py-2 text-white"
+                  >
+                    <h2 className="menu-title text-md font-bold">
+                      {elem.name}
+                    </h2>
+                    <ul className="menu-dropdown hidden absolute right-[100%] top-0 bg-[#fff] min-w-32">
+                      {elem.dropdown.map((e, ind) => {
+                        return <li key={ind}>{e.link}</li>;
+                      })}
+                    </ul>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </div>

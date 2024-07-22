@@ -10,7 +10,6 @@ import OfferSection from "./Components/OfferSection";
 function App() {
   return (
     <div className="bg-[#111] overflow-hidden">
-      <Navbar />
       <HeroSection />
       <PayBills />
       <RechargeSection />
