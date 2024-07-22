@@ -19,7 +19,7 @@ function OfferSection() {
         trigger: section,
         start: "top 50%",
         end: "top 15%",
-        markers: true,
+        //markers: true,
         scrub: true,
       },
     });
