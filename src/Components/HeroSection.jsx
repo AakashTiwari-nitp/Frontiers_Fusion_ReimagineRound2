@@ -14,6 +14,7 @@ import p7 from "../assets/p7.png";
 import p8 from "../assets/p8.png";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import gsap from "gsap";
 
 const images = [p1, p2, p3, p4, p5, p6, p7, p8];
 
@@ -108,14 +109,38 @@ function HeroSection() {
     setShow(!show);
   };
 
+  // const navbarRef = useRef(null);
+
+  // useEffect(() => {
+  //   if (navbarRef.current) {
+  //     const navbarElements = navbarRef.current.children;
+      
+  //     gsap.fromTo(
+  //       navbarElements,
+  //       { 
+  //         opacity: 0, 
+  //         y: -20 
+  //       },
+  //       { 
+  //         opacity: 1, 
+  //         y: 0, 
+  //         duration: 0.5, 
+  //         stagger: 0.1,
+  //         ease: "power2.out"
+  //       }
+  //     );
+  //   }
+  // }, []);
+
+
   return (
     <>
       <div className="hero">
       <div className="w-full h-32 bg-[#111] pt-2">
         <div className="navbar-container flex justify-between lg:gap-16 items-center py-2 w-full px-10 m-auto">
-          <a href="/" className="navbar-logo">
+          <div className="navbar-logo">
             <img src={bsnlLogo} className="h-14 w-14 cover" alt="BSNL Logo" />
-          </a>
+          </div>
           <div className="navbar-menu flex-1 hidden lg:block z-50">
             <ul className="menu-list flex justify-end">
               {navlinks.map((elem, index) => {
