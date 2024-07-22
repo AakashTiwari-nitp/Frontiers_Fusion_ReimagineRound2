@@ -16,8 +16,8 @@ const images = [p1, p2, p3, p4, p5, p6, p7, p8];
 function HeroSection() {
   const sliderRef = useRef(null);
   const bannerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
+  // const [isDragging, setIsDragging] = useState(false);
+  // const [startX, setStartX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
 /*
   useEffect(() => {
@@ -62,35 +62,35 @@ function HeroSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotationY((prevRotationY) => prevRotationY + 45); // Adjust the degree of rotation as needed
+      setRotationY((prevRotationY) => prevRotationY - 45); // Adjust the degree of rotation as needed
     }, 3000); // 10000ms = 10 seconds
 
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, []); 
 
   const handleLeftClick = () => {
-    setRotationY(rotationY - 45); // Adjust the degree of rotation as needed
+    setRotationY(rotationY + 45); // Adjust the degree of rotation as needed
   };
 
   const handleRightClick = () => {
-    setRotationY(rotationY + 45); // Adjust the degree of rotation as needed
+    setRotationY(rotationY - 45); // Adjust the degree of rotation as needed
   };
 
   return (
     <div className="hero">
       <div
         ref={bannerRef}
-        className="banner bg-[#111] h-[95vh] w-full text-center flex justify-center items-center overflow-hidden relative"
+        className="banner bg-[#111] h-[50vw] sm:h-[40vw] md:h-[35vw] xl:h-[30vw] w-full text-center flex justify-center items-center overflow-hidden relative rounded-md"
       >
         <button
           onClick={handleLeftClick}
           className="absolute left-0 top-1/3 transform -translate-y-1/2 p-4 text-black z-20 rounded-full"
         >
-          <FaRegArrowAltCircleLeft size={"2em"}/>
+          <FaRegArrowAltCircleLeft className="text-white" size={"2em"}/>
         </button>
         <div
           ref={sliderRef}
-          className="slider absolute w-[430px] h-[180px] top-[20%] -translate-y-1/2 [transform-style:preserve-3d] z-10 cursor-grab"
+          className="slider absolute w-[35vw] h-[17vw] sm:w-[38vw] sm:h-[17vw] md:h-[15vw] lg:w-[35vw] lg:h-[15vw] xl:w-[25vw] xl:h-[12vw] top-[25%] -translate-y-1/2 [transform-style:preserve-3d] z-10 cursor-grab"
           style={{
             "--quantity": images.length,
             transform: `perspective(1000px) rotateY(${rotationY}deg)`,
@@ -118,7 +118,7 @@ function HeroSection() {
           onClick={handleRightClick}
           className="absolute right-3 top-1/3 transform -translate-y-1/2  text-black z-20 rounded-full "
         >
-         <FaRegArrowAltCircleRight size={"2em"} />
+         <FaRegArrowAltCircleRight className="text-white" size={"2em"} />
         </button>
       </div>
     </div>

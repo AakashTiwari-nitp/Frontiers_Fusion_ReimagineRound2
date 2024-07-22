@@ -13,7 +13,7 @@ function OfferSection() {
     const section = sectionRef.current;
 
     gsap.to(section, {
-      x: "-38%",
+      x: "-50%",
       ease: "none",
       scrollTrigger: {
         trigger: section,
@@ -69,13 +69,13 @@ function OfferSection() {
 
   return (
     <div className="mt-10">
-        <div className="mt-2 mx-auto">
-            <h1 className="text-white text-7xl text-center font-extrabold">Offers</h1>
-        </div>
       <div
         ref={sectionRef}
-        className="w-[160vw] h-[48vh] my-2 mt-5 px-10 flex justify-evenly gap-5"
+        className="w-[200vw] h-[48vh] my-2 mt-5 px-10 flex justify-evenly gap-5"
       >
+        <div className="w-[50vw] h-55 flex items-center justify-center">
+            <h1 className="text-white text-[150px] font-extrabold">Offers</h1>
+        </div>
         {offers.map((elem, index) => (
           <div
             className="cards w-64 h-fit mt-2 rounded-lg overflow-hidden m-auto bg-[#484848]"
