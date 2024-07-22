@@ -20,7 +20,7 @@ function BSNLApp() {
       </div>
       <div className="sm:w-[30%] w-1/2 m-auto sm:m-0 hidden sm:block">
         <div className="w-full h-[100vh] overflow-hidden">
-          <img src={iphone} className="w-full h-full cover py-5" alt="" />
+          <img src={iphone} className="w-73 h-full cover py-5" alt="" />
         </div>
       </div>
     </div>
