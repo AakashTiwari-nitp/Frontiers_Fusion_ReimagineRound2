@@ -41,7 +41,7 @@ function OfferSection() {
 
     updateAnimation();
 
-    window.addEventListener("resize", updateAnimation);
+    // window.addEventListener("resize", updateAnimation);
 
     return () => {
       window.removeEventListener("resize", updateAnimation);

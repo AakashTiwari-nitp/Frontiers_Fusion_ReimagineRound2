@@ -8,16 +8,30 @@ import { IoStorefront } from "react-icons/io5";
 function Footer() {
   return (
     <div className="bg-[#111] py-5 w-full">
-        <div className="text-white lg:w-3/5 sm:w-4/5 w-[90%] rounded-lg text-center bg-[#4C3DFF] py-5 m-auto">
-            <h1 className="text-5xl font-extrabold tracking-wide">Need a Guidance?</h1>
-            <h2 className="text-xl mt-2">It's Our Pleasure to help You!</h2>
-            <div className="flex justify-around py-5 flex-wrap sm:flex-row flex-col px-10 sm:px-0 gap-3 sm:gap-0">
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><BiSupport className="inline-block pr-1" size={"1.5em"} />Support</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><IoIosChatbubbles className="inline-block pr-1" size={"1.5em"}  />Chat with Us</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><FiPhoneCall className="inline-block pr-1" size={"1.5em"} />Call Us</h2>
-                <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2"><IoStorefront className="inline-block pr-1" size={"1.5em"} />Store</h2>
-            </div>
+      <div className="text-white lg:w-3/5 sm:w-4/5 w-[90%] rounded-lg text-center bg-[#4C3DFF] py-5 m-auto">
+        <h1 className="text-5xl font-extrabold tracking-wide">
+          Need a Guidance?
+        </h1>
+        <h2 className="text-xl mt-2">It's Our Pleasure to help You!</h2>
+        <div className="flex justify-around py-5 flex-wrap sm:flex-row flex-col px-10 sm:px-0 gap-3 sm:gap-0">
+          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+            <BiSupport className="inline-block pr-1" size={"1.5em"} />
+            Support
+          </h2>
+          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+            <IoIosChatbubbles className="inline-block pr-1" size={"1.5em"} />
+            Chat with Us
+          </h2>
+          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+            <FiPhoneCall className="inline-block pr-1" size={"1.5em"} />
+            Call Us
+          </h2>
+          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+            <IoStorefront className="inline-block pr-1" size={"1.5em"} />
+            Store
+          </h2>
         </div>
+      </div>
       <div className=" w-full flex sm:justify-around justify-start pt-5 pb-10 flex-wrap px-5 gap-10 sm:gap-5 sm:px-2 md:gap-0">
         <div className="text-white text-left">
           <h1 className="text-xl font-semibold text-[#666] mb-3">
@@ -69,17 +83,25 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className=" bg-[#010101] text-white flex justify-around py-5 gap-50 items-center">
-        <div className="flex gap-5 items-center">
-          <div className="h-8 w-8">
+      <div className=" bg-[#010101] text-white flex lg:flex-row flex-col justify-around py-5 gap-50 items-center">
+        <div className="flex flex-wrap gap-5 items-center">
+          <div className="h-8 w-8 m-auto">
             <img src={bsnlLogo} className="w-full h-full cover" alt="" />
           </div>
-          <h1 className="text-sm">2024 &copy; Bharat Sanchar Nigam Limited. All Right Reserved</h1>
+          <h1 className="sm:text-sm text-xs m-auto text-center">
+            2024 &copy; Bharat Sanchar Nigam Limited. All Right Reserved
+          </h1>
         </div>
-        <h6 className="text-sm">Press Release</h6>
-        <h6 className="text-sm">Regulatory</h6>
-        <h6 className="text-sm">Policies</h6>
-        <h6 className="text-sm">Terms and Conditions</h6>
+        <div className="flex gap-10 flex-wrap justify-center">
+          <div className="flex gap-10">
+            <h6 className="text-sm">Press Release</h6>
+            <h6 className="text-sm">Regulatory</h6>
+          </div>
+          <div className="flex gap-10">
+            <h6 className="text-sm">Policies</h6>
+            <h6 className="text-sm">Terms and Conditions</h6>
+          </div>
+        </div>
       </div>
     </div>
   );
