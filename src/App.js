@@ -5,6 +5,7 @@ import PayBills from "./Components/PayBills";
 import RechargeSection from "./Components/RechargeSection";
 import "./index.css";
 import OfferSection from "./Components/OfferSection";
+import Acc from "./Components/Acc";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <RechargeSection />
       <OfferSection />
       <BSNLApp />
+      <Acc/>
       <Footer />
     </div>
   );
