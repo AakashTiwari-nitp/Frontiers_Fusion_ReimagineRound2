@@ -3,6 +3,7 @@ import p1 from "../assets/p1.jpg";
 import p2 from "../assets/p2.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import './OfferSection.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,14 +99,14 @@ function OfferSection() {
           <h1 className="text-white text-[10vw] font-extrabold">Offers</h1>
         </div>
         {offers.map((elem, index) => (
-          <div
+          <div id="offercard"
             className="cards w-64 h-fit mx-[1vw] rounded-lg overflow-hidden bg-[#484848] shrink-0"
             key={index}
           >
-            <div className="w-full h-48">
+            <div id="offerimage" className="w-full h-48">
               <img src={elem.img} className="w-full h-full object-cover" alt="" />
             </div>
-            <div className="p-2 pb-2 text-white text-center">
+            <div id="offerhead" className="p-2 pb-2 text-white text-center">
               <h1 className="text-xl font-extrabold tracking-wide">
                 {elem.head}
               </h1>

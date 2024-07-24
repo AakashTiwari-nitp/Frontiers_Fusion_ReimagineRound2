@@ -1,0 +1,7 @@
+#offercard{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Example shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+#offercard:hover {
+    box-shadow: 0 0 20px 5px #00ff00; /* Neon green glow effect */
+}
