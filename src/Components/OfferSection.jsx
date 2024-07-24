@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import p1 from "../assets/p1.jpg";
-import p2 from "../assets/p2.jpg";
+import m from "../assets/m.png";
+import r from "../assets/r.png";
+import t from "../assets/t.png";
+import as from "../assets/as.png";
+import b from "../assets/b.png";
+import s from "../assets/s.png";
+import tt from "../assets/tt.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './OfferSection.css'
@@ -52,39 +57,40 @@ function OfferSection() {
 
   const offers = [
     {
-      img: p2,
+      img: m, 
       head: "Mobile Offers",
       content: "Explore Various Promotional Offers",
     },
+    
     {
-      img: p1,
-      head: "Registration",
-      content: "BSNL partner/BharatNet Udyami Registration",
-    },
-    {
-      img: p2,
+      img: t,
       head: "Training & Program",
       content: "BSNL Offers Telecom Training For Students and Professionals",
     },
     {
-      img: p1,
+      img: as,
       head: "Asset Monetization",
       content: "BSNL offers spaces/Land available for Rent/sale",
     },
     {
-      img: p2,
+      img: b,
       head: "Broadband",
       content: "Explore various offers for Fibre Broadband",
     },
     {
-      img: p2,
+      img: s,
       head: "Seamless connectivity",
       content: "Seamless connectivity in Delhi & NCR area",
     },
     {
-      img: p1,
-      head: "Mobile Offers",
-      content: "Explore Various Promotional Offers",
+      img: tt,
+      head: "Training Program",
+      content: "Register for BSNL certified Live and interactive vocation Training summer program",
+    },
+    {
+      img: r,
+      head: "Registration",
+      content: "BSNL partner/BharatNet Udyami Registration",
     },
   ];
 

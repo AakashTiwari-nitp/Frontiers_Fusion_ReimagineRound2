@@ -38,7 +38,7 @@ function Footer() {
             Quick Access
           </h1>
           <div className="links text-md flex flex-col gap-3">
-            <h6>Prepaid Recharge</h6>
+            <h6 className=" hover:bg-slate-50">Prepaid Recharge</h6>
             <h6>PostPaid Bill Payment</h6>
             <h6>BroadBand Payment</h6>
             <h6>Exclusive Offers</h6>
