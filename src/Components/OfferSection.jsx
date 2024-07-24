@@ -3,6 +3,7 @@ import p1 from "../assets/p1.jpg";
 import p2 from "../assets/p2.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import './OfferSection.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,7 @@ function OfferSection() {
         });
       } else {
         gsap.set(content, { x: 0 });
-        ScrollTrigger.getAll().forEach(t => t.kill());
+        ScrollTrigger.getAll().forEach((t) => t.kill());
       }
     };
 
@@ -45,7 +46,7 @@ function OfferSection() {
 
     return () => {
       window.removeEventListener("resize", updateAnimation);
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 
@@ -91,30 +92,36 @@ function OfferSection() {
     <div className="overflow-hidde mt-5" ref={sectionRef}>
       <div
         ref={contentRef}
-        className="flex items-center"
-        style={{ width: 'max-content' }}
+        className="flex items-center mx-5"
+        style={{ width: "max-content" }}
       >
         <div className="w-[50vw] h-[100%] flex shrink-0 items-center justify-center">
           <h1 className="text-white text-[10vw] font-extrabold">Offers</h1>
         </div>
-        {offers.map((elem, index) => (
-          <div
-            className="cards w-64 h-fit mx-[1vw] rounded-lg overflow-hidden bg-[#484848] shrink-0"
-            key={index}
-          >
-            <div className="w-full h-48">
-              <img src={elem.img} className="w-full h-full object-cover" alt="" />
+        <div className="flex w-64 h-fit m-2">
+          {offers.map((elem, index) => (
+            <div id="offercard"
+              className="cards w-80 h-80 mx-[1vw] rounded-lg overflow-hidden bg-[#484848] shrink-0"
+              key={index}
+            >
+              <div className="w-full h-48">
+                <img
+                  src={elem.img}
+                  className="w-full h-full object-cover"
+                  alt=""
+                />
+              </div>
+              <div className="p-2 pb-2 text-white text-center">
+                <h1 className="text-xl font-extrabold tracking-wide">
+                  {elem.head}
+                </h1>
+                <h2 className="text-base font-semibold tracking-wide">
+                  {elem.content}
+                </h2>
+              </div>
             </div>
-            <div className="p-2 pb-2 text-white text-center">
-              <h1 className="text-xl font-extrabold tracking-wide">
-                {elem.head}
-              </h1>
-              <h2 className="text-base font-semibold tracking-wide">
-                {elem.content}
-              </h2>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
