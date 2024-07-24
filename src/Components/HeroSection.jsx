@@ -3,7 +3,6 @@ import "./Navbar.css";
 import bsnlLogo from "../assets/logobsnl.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
-
 import p1 from "../assets/p1.jpg";
 import p2 from "../assets/p2.jpg";
 import p3 from "../assets/p3.png";
@@ -14,7 +13,7 @@ import p7 from "../assets/p7.png";
 import p8 from "../assets/p8.png";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 const images = [p1, p2, p3, p4, p5, p6, p7, p8];
 
@@ -150,7 +149,7 @@ function HeroSection() {
                       href="#"
                       className="menu relative block px-4 py-2 text-white"
                     >
-                      <h2 className="menu-title text-md font-bold">
+                      <h2 className="menu-title text-base font-[PPWoodland] font-bold">
                         {elem.name}
                       </h2>
                       <ul className="menu-dropdown hidden absolute top-[100%] left-0 bg-[#fff] min-w-32">
