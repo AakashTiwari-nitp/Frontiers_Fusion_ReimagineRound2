@@ -9,7 +9,7 @@ import Acc from "./Components/Acc";
 
 function App() {
   return (
-    <div className="bg-[#111] overflow-hidden">
+    <div className="bg-[#111] w-screen overflow-hidden">
       <HeroSection />
       <PayBills />
       <RechargeSection />
