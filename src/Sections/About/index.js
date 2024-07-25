@@ -126,7 +126,16 @@ const About = () => {
       </Hand>
       <Main>
         <div>
-          <Title>Connect </Title>
+           <Title style={{ 
+  fontWeight: 'bold',
+  backgroundImage: 'linear-gradient(to right, #39ff14, #1eff00)', 
+  WebkitBackgroundClip: 'text',
+  color: 'transparent', 
+  height: '25px', 
+  textShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
+}}>
+  Connect
+</Title>
           <CurvedLine />
         </div>
         <Content>
