@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
-import bsnlLogo from "../assets/logobsnl.png";
+import bsnlLogo from "../assets/logo.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import p1 from "../assets/p1.jpg";
