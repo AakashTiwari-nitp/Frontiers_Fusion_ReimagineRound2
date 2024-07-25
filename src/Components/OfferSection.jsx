@@ -101,7 +101,7 @@ function OfferSection() {
         style={{ width: "max-content" }}
       >
         <div className="w-[50vw] h-[100%] flex shrink-0 items-center justify-center">
-          <h1 className="text-white text-[10vw] font-extrabold">Offers</h1>
+          <h1 id="offerhead" className="text-white text-[10vw] font-extrabold">Offers</h1>
         </div>
         <div className="flex w-64 h-fit m-2">
           {offers.map((elem, index) => (
