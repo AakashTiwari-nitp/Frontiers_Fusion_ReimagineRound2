@@ -1,5 +1,5 @@
 import React from "react";
-import bsnlLogo from "../assets/logobsnl.png";
+import bsnlLogo from "../assets/logo.png";
 import { BiSupport } from "react-icons/bi";
 import { IoIosChatbubbles } from "react-icons/io";
 import { FiPhoneCall } from "react-icons/fi";
