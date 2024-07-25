@@ -12,6 +12,7 @@ import { CgProfile } from "react-icons/cg";
 import { SiNetflix } from "react-icons/si";
 import { RiMovie2Fill } from "react-icons/ri";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import './PayBills.css'
 
 function PayBills() {
   const familyPrePlans = [
@@ -707,14 +708,14 @@ function PayBills() {
         <h1 className="mt-10 text-white text-center text-2xl font-bold tracking-wide">
           Buy a New Connection
         </h1>
-        <div className="m-auto flex gap-5 mt-5 w-fit flex-wrap justify-evenly">
+        <div  className="m-auto flex gap-5 mt-5 w-fit flex-wrap justify-evenly">
           {newConnection.map((elem, index) => {
             return (
-              <div
+              <div id="neon-hover"
                 className="bg-black w-32 h-32 border-2 border-white hover:border-red-700 rounded-lg"
                 key={index}
               >
-                <div className="w-20 h-20 m-auto">
+                <div id="neon-hover" className="w-20 h-20 m-auto">
                   <img src={elem.img} className="w-full h-full cover" alt="" />
                 </div>
                 <h2 className="text-white text-base">{elem.text}</h2>
