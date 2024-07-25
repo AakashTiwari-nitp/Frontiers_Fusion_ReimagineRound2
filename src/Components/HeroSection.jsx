@@ -86,19 +86,19 @@ function HeroSection() {
     },
     {
       name: "About Us",
-      dropdown: [{ link: "Company" }, { link: "HRD" }, { link: "Others" }],
+      dropdown: [{ link: "Our Company" }, { link: "Vision & Mission" }, { link: "Leadership Team" },{ link: "Careers" },{ link: "News & Events" }],
     },
     {
       name: "Landline & data",
-      dropdown: [{ link: "Usage" }, { link: "Data" }, { link: "Speed Test" }],
+      dropdown: [{ link: "Plans & Pricing" }, { link: "Usage Details" }, { link: "Data Add-ons" },{ link: "Speed Test" },{ link: "Customer Support" },{ link: "Installation Guide" }],
     },
     {
       name: "Mobile & data",
-      dropdown: [{ link: "Usage" }, { link: "Data" }, { link: "Speed Test" }],
+      dropdown: [{ link: "Prepaid Plans" }, { link: "PostPaid Plans" }, { link: "Data Packs" },{ link: "Usage Details" },{ link: "Roaming Information" },{ link: "SIM Activation" }],
     },
     {
       name: "Ent. Services",
-      dropdown: [{ link: "SetUp Box" }, { link: "Plans" }],
+      dropdown: [{ link: "BSNL TV" }, { link: "Music Streaming" },{link: "Online Gaming" },{ link: "Partner Offers" },{ link: "Event Tickets" },{ link: "Premium Subscriptions" }],
     },
   ];
 

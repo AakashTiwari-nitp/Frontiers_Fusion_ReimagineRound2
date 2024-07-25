@@ -9,7 +9,7 @@ import illustration__woman_mobile from "../assets/illustration-woman-online-mobi
 
 const questionsAnswers = [
   {
-    question: "How can I activate a BSNL SIM card?",
+    question: "How can I activate my BSNL SIM card?",
     answer:
       "Visit a BSNL store with valid ID proof and a passport-size photo. Fill out the form, and the SIM will be activated within 24 hours.",
   },
@@ -23,12 +23,16 @@ const questionsAnswers = [
     answer: `Dial *123# from your BSNL mobile to check your balance. Alternatively, you can use the BSNL mobile app or visit the website.`,
   },
   {
-    question: "CHow do I pay my BSNL bill online?",
-    answer: `YVisit the BSNL portal or use the BSNL app to pay bills online. You can use net banking, debit/credit cards, or UPI for transactions.`,
+    question: "What if my BSNL SIM is lost or stolen?",
+    answer: `Call 1503 to block the SIM and visit a BSNL store with ID proof for a replacement.`,
   },
   {
     question: "What should I do if I have network issues?",
     answer: `Restart your device, check for service outages, and ensure settings are correct. If problems persist, contact BSNL customer care for support and troubleshooting.`,
+  },
+  {
+    question: "How can I port my number to BSNL?",
+    answer: `Send 'PORT <your number>' to 1900, get the UPC, and visit a BSNL store with ID proof to complete the process.`,
   },
 ];
 

@@ -53,38 +53,33 @@ function OfferSection() {
   const offers = [
     {
       img: p2,
-      head: "Mobile Offers",
-      content: "Explore Various Promotional Offers",
+      head: "Unmissable Mobile Deals",
+      content: "Experience superior connectivity with our exclusive offers",
     },
     {
       img: p1,
-      head: "Registration",
-      content: "BSNL partner/BharatNet Udyami Registration",
+      head: "Empower with BSNL",
+      content: "Register for Bharat-Net Udyami and lead the digital revolution with BSNL to bring seamless connectivity",
     },
     {
       img: p2,
-      head: "Training & Program",
-      content: "BSNL Offers Telecom Training For Students and Professionals",
+      head: "Learn with BSNL",
+      content: "Elevate your career with our industry-oriented telecom courses",
     },
     {
       img: p1,
-      head: "Asset Monetization",
-      content: "BSNL offers spaces/Land available for Rent/sale",
+      head: "Strategic Locations for You",
+      content: "Lease or buy prime BSNL properties now!",
     },
     {
       img: p2,
-      head: "Broadband",
-      content: "Explore various offers for Fibre Broadband",
+      head: "Stay Connected Always",
+      content: "Upgrade to lightning-fast fiber broadband and stay ahead",
     },
     {
       img: p2,
       head: "Seamless connectivity",
-      content: "Seamless connectivity in Delhi & NCR area",
-    },
-    {
-      img: p1,
-      head: "Mobile Offers",
-      content: "Explore Various Promotional Offers",
+      content: "Get consistent and reliable coverage throughout Delhi and NCR",
     },
   ];
 
