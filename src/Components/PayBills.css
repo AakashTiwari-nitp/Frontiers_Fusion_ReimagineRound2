@@ -4,3 +4,16 @@
     transition: border-color 0.3s ease, transform 0.3s ease; 
     cursor: pointer;
   }
+ #paybutton {
+   
+  
+    /* Transition for smooth animation */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  #paybutton:hover {
+    
+    box-shadow: 0 0 10px #1eff00, 0 0 2px #1eff00, 0 0 3px #1eff00, 0 0 4px #1eff00;
+    transform: translateY(-3px);
+    cursor: pointer; 
+  }
