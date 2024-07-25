@@ -25,3 +25,22 @@
       transform: scale(1);
     }
   }
+  #offercard:hover #offercontent {
+    transform: translateZ(20px); 
+    animation: glow 1.5s infinite alternate;
+    
+  }
+
+  /* Text styles */
+  #offercontent h1 {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    line-height: 1.2; 
+  }
+
+  #offercontent h2 {
+    font-size: 1rem; 
+    font-weight: normal; 
+    line-height: 1.2; 
+  }
