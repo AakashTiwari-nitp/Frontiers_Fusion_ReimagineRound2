@@ -349,7 +349,7 @@ function PayBills() {
                         <h3 className="text-lg font-sans">{elem.data}</h3>
                       </div>
                     </div>
-                    <button className="text-lg w-3/4 py-2 mt-5 bg-slate-300 text-black font-semibold rounded-full text-center">
+                    <button id="paybutton" className="text-lg w-3/4 py-2 mt-5 bg-green-400 hover:bg-[#00FF0084] text-black font-semibold rounded-full text-center">
                       Recharge
                       <MdElectricBolt
                         className="inline-block pr-1"
@@ -479,7 +479,7 @@ function PayBills() {
                       </div>
                     </div>
                   </div>
-                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-22">
+                  <button id="paybutton" className="absolute -right-4 bottom-1 bg-green-400 hover:bg-[#00000084] px-10 py-2 rounded-full text-base pr-22">
                     Recharge Now
                     <FaExternalLinkAlt className="inline-block ml-5" />
                   </button>
@@ -577,7 +577,7 @@ function PayBills() {
                         </div>
                       </div>
                     </div>
-                    <button className="absolute -right-4 bottom-1 bg-[#083DE0] px-10 py-2 rounded-full text-base pr-28">
+                    <button id="paybutton" className="absolute -right-4 bottom-1 bg-green-400 hover:bg-[#00000084] px-10 py-2 rounded-full text-base pr-28">
                       Avail Now
                       <FaExternalLinkAlt className="inline-block ml-5" />
                     </button>
@@ -663,7 +663,7 @@ function PayBills() {
                       </div>
                     </div>
                   </div>
-                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-22">
+                  <button id="paybutton" className="absolute -right-4 bottom-1 bg-green-400 hover:bg-[#00000084] px-10 py-2 rounded-full text-base pr-22">
                     Recharge Now
                     <FaExternalLinkAlt className="inline-block ml-5" />
                   </button>
