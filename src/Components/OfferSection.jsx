@@ -106,7 +106,7 @@ function OfferSection() {
                   alt=""
                 />
               </div>
-              <div className="p-2 pb-2 text-white text-center">
+              <div id="offercontent" className="p-2 pb-2 text-white text-center">
                 <h1 className="text-xl font-extrabold tracking-wide">
                   {elem.head}
                 </h1>
