@@ -1,1 +1,10 @@
+#footerbutton {
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    transition: transform 0.2s ease; /* Smooth transition for the transform property */
+  }
+  
+  #footerbutton:hover {
+    transform: scale(1.1); /* Increase button size on hover */
+  }
 
+  
