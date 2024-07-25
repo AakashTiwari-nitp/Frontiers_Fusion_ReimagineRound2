@@ -221,7 +221,7 @@ function PayBills() {
               </label>
             </div>
           </div>
-          <button className="text-center text-white bg-orange-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
+           <button  id="paybutton" className="text-center text-white bg-green-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
             Recharge
             <MdElectricBolt className="inline-block pr-1" size={"1.5em"} />
           </button>
