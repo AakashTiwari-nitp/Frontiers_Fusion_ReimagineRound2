@@ -218,7 +218,7 @@ function PayBills() {
               </label>
             </div>
           </div>
-           <button  id="paybutton" className="text-center text-white bg-green-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
+           <button id="paybutton" className="text-center text-white bg-green-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
             Recharge
             <MdElectricBolt className="inline-block pr-1" size={"1.5em"} />
           </button>
@@ -279,7 +279,7 @@ function PayBills() {
               </label>
             </div>
           </div>
-          <button className="text-center text-white bg-orange-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
+          <button id="paybutton" className="text-center text-white bg-green-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
             Recharge
             <MdElectricBolt className="inline-block pr-1" size={"1.5em"} />
           </button>
@@ -393,7 +393,7 @@ function PayBills() {
                         <h3 className="text-lg font-sans">{elem.data}</h3>
                       </div>
                     </div>
-                    <button id="paybutton" className="text-lg w-3/4 py-2 mt-5 bg-slate-300 text-black font-semibold rounded-full text-center">
+                    <button id="paybutton" className="text-center text-white bg-green-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
                       Recharge
                       <MdElectricBolt
                         className="inline-block pr-1"
