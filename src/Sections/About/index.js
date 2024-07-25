@@ -132,7 +132,8 @@ const About = () => {
   WebkitBackgroundClip: 'text',
   color: 'transparent', 
   height: '25px', 
-  textShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
+  textShadow: '0 0 10px rgba(255, 255, 255, 0.8)',
+  cursor: 'pointer',
 }}>
   Connect
 </Title>
@@ -148,10 +149,7 @@ const About = () => {
             </Human>
 
             <Text>
-              We help our customers to tell about themselves, to grow and stand
-              out in an increasingly competitive digital world, through creative
-              projects that are able to attract and involve, creating strategic
-              value.
+            The BSNL app allows users to manage their accounts, recharge prepaid mobiles, pay bills, and explore BSNL services conveniently. It's a one-stop solution for BSNL customers to handle their telecommunications needs efficiently.
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />

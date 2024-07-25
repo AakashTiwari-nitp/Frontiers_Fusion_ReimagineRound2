@@ -19,26 +19,23 @@ function PayBills() {
     {
       price: 799,
       validity: "30 Days",
-      bData: "100GB/Plan",
-      connection: "2",
-      subscriptions: "2",
-      eBenefits: "200GB RollOver",
+      data: "2GB",
+      users: "2",
+      sms: "100",
     },
     {
-      price: 599,
-      validity: "105 Days",
-      bData: "75GB/Plan",
-      connection: "2",
-      subscriptions: "3",
-      eBenefits: "20 Sms/Day",
+      price: 999,
+      validity: "30 Days",
+      data: "3GB",
+      users: "3",
+      sms: "100",
     },
     {
-      price: 599,
-      validity: "105 Days",
-      bData: "75GB/Plan",
-      connection: "2",
-      subscriptions: "3",
-      eBenefits: "20 Sms/Day",
+      price: 1299,
+      validity: "30 Days",
+      data: "4GB",
+      users: "4",
+      sms: "100",
     },
   ];
 
@@ -266,7 +263,7 @@ function PayBills() {
                 required
               />
               <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-yellow-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-yellow-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-yellow-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Enter the Number:
+                Enter the Fiber Number:
               </label>
             </div>
             {/* input for postpaid */}
@@ -278,7 +275,7 @@ function PayBills() {
                 required
               />
               <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-yellow-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-yellow-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-yellow-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Enter the Number:
+                Enter the Fiber Number:
               </label>
             </div>
           </div>
@@ -430,89 +427,63 @@ function PayBills() {
               {familyPrePlans.map((elem, index) => {
                 return (
                   <div
-                    key={index}
-                    className="h-80 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
-                  >
-                    <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
-                      <div className="w-[40%]">
-                        <h2 className="text-black text-lg font-extrabold">
-                          ₹{elem.price}
+                  key={index}
+                  className="h-64 w-80 bg-[#1E1E1E] rounded-lg relative overflow-hidden"
+                >
+                  <div className="border-b-2 border-b-[#C8D3F6] px-3 py-1 bg-[#003BFF] h-16 flex justify-between gap-2">
+                    <div className="w-[40%]">
+                      <h2 className="text-white text-lg font-extrabold">
+                        ₹{elem.price}
+                      </h2>
+                      <h3 className="text-white text-base">View Details</h3>
+                    </div>
+                    <div className="w-[45%]">
+                      <h2 className="text-base font-bold text-right text-[#39FF14]">
+                        Unlimited Voice Call Facility
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="h-fit flex justify-between px-3 py-1">
+                    <div className="w-[45%] flex flex-col gap-2">
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#white] text-lg font-bold">
+                          Validity
                         </h2>
-                        <h3 className="text-blue-600 text-base">
-                          View Details
+                        <h3 className="text-base text-blue-400">
+                          {elem.validity}
                         </h3>
                       </div>
-                      <div className="w-[45%]">
-                        <h2 className="text-base font-bold text-right text-red-600">
-                          Unlimited Voice Call Facility
+                      <div className="px-2 py-1">
+                        <h2 className="text-white text-lg font-bold">
+                          Users
                         </h2>
-                      </div>
-                    </div>
-                    <div className="h-fit flex justify-between">
-                      <div className="w-[45%] flex flex-col gap-2">
-                        <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
-                            Connections
-                          </h2>
-                          <div className="text-black text-md flex item-center gap-2">
-                            <CgProfile
-                              size={"2.5em"}
-                              className="inline-block"
-                            />
-                            <h3 className="">
-                              {elem.connection} Additional Family SIM
-                            </h3>
-                          </div>
-                        </div>
-                        <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
-                            Validity
-                          </h2>
-                          <h3 className="text-base text-black">
-                            {elem.validity}
-                          </h3>
-                        </div>
-                        <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
-                            Subscriptions
-                          </h2>
-                          <div className="text-black text-md flex item-center gap-2">
-                            <div className="flex">
-                              <SiNetflix
-                                size={"2em"}
-                                className="inline-block p-1 border-2 border-black rounded-full"
-                              />
-                              <RiMovie2Fill
-                                size={"2em"}
-                                className="inline-block p-1 border-2 border-black rounded-full"
-                              />
-                            </div>
-                            <h3 className="text-base">+{elem.subscriptions}</h3>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="w-[35%] flex flex-col gap-2">
-                        <div className="px-2 py-3">
-                          <h2 className="text-[#727070] text-lg font-bold">
-                            Benefits
-                          </h2>
-                          <h3 className="text-base text-black">{elem.bData}</h3>
-                        </div>
-                        <div className="px-2 py-3">
-                          <h2 className="text-[#727070] text-lg font-bold">
-                            Extra Benefits
-                          </h2>
-                          <h3 className="text-base text-black">
-                            {elem.eBenefits}
-                          </h3>
+                        <div className="text-white text-md flex item-center gap-2"> 
+                          <h3 className="text-base text-blue-400">{elem.users}</h3>
                         </div>
                       </div>
                     </div>
-                    <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
-                      Avail Now
-                      <FaExternalLinkAlt className="inline-block ml-5" />
-                    </button>
+                    <div className="w-[35%] flex flex-col gap-2">
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#white] text-lg font-bold">
+                          Data
+                        </h2>
+                        <h3 className="text-base text-blue-400">
+                          {elem.data}/User
+                        </h3>
+                      </div>
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#white] text-lg font-bold">
+                          SMS/Day
+                        </h2>
+                        <h3 className="text-base text-blue-400">{elem.sms}/User</h3>
+                      </div>
+                    </div>
                   </div>
+                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-22">
+                    Recharge Now
+                    <FaExternalLinkAlt className="inline-block ml-5" />
+                  </button>
+                </div>
                 );
               })}
             </div>
@@ -529,33 +500,33 @@ function PayBills() {
                 return (
                   <div
                     key={index}
-                    className="h-80 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+                    className="h-80 w-80 bg-[#1E1E1E] rounded-lg relative overflow-hidden"
                   >
-                    <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                    <div className="border-b-2 border-b-[#C8D3F6] px-3 py-1 bg-[#003BFF] h-16 flex justify-between gap-2">
                       <div className="w-[40%]">
-                        <h2 className="text-black text-lg font-extrabold">
+                        <h2 className="text-white text-lg font-extrabold">
                           ₹{elem.price}
                         </h2>
-                        <h3 className="text-blue-600 text-base">
+                        <h3 className="text-white text-base">
                           View Details
                         </h3>
                       </div>
                       <div className="w-[45%]">
-                        <h2 className="text-base font-bold text-right text-red-600">
+                        <h2 className="text-base font-bold text-right text-[#39FF14]">
                           Unlimited Voice Call Facility
                         </h2>
                       </div>
                     </div>
-                    <div className="h-fit flex justify-between">
+                    <div className="h-fit px-3 py-1 flex justify-between">
                       <div className="w-[45%] flex flex-col gap-2">
                         <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
+                          <h2 className="text-[#white] text-lg font-bold">
                             Connections
                           </h2>
-                          <div className="text-black text-md flex item-center gap-2">
+                          <div className="text-blue-400 text-md flex item-center gap-2">
                             <CgProfile
                               size={"2.5em"}
-                              className="inline-block"
+                              className="inline-block text-white"
                             />
                             <h3 className="">
                               {elem.connection} Additional Family SIM
@@ -563,50 +534,50 @@ function PayBills() {
                           </div>
                         </div>
                         <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
+                          <h2 className="text-[#white] text-lg font-bold">
                             Validity
                           </h2>
-                          <h3 className="text-base text-black">
+                          <h3 className="text-base text-blue-400">
                             {elem.validity}
                           </h3>
                         </div>
                         <div className="px-2 py-1">
-                          <h2 className="text-[#727070] text-lg font-bold">
+                          <h2 className="text-[#white] text-lg font-bold">
                             Subscriptions
                           </h2>
                           <div className="text-black text-md flex item-center gap-2">
                             <div className="flex">
                               <SiNetflix
                                 size={"2em"}
-                                className="inline-block p-1 border-2 border-black rounded-full"
+                                className="inline-block text-white p-1 border-2 border-white rounded-full"
                               />
                               <RiMovie2Fill
                                 size={"2em"}
-                                className="inline-block p-1 border-2 border-black rounded-full"
+                                className="inline-block text-white p-1 border-2 border-white rounded-full"
                               />
                             </div>
-                            <h3 className="text-base">+{elem.subscriptions}</h3>
+                            <h3 className="text-base text-blue-400">+{elem.subscriptions}</h3>
                           </div>
                         </div>
                       </div>
                       <div className="w-[35%] flex flex-col gap-2">
                         <div className="px-2 py-3">
-                          <h2 className="text-[#727070] text-lg font-bold">
+                          <h2 className="text-[#white] text-lg font-bold">
                             Benefits
                           </h2>
-                          <h3 className="text-base text-black">{elem.bData}</h3>
+                          <h3 className="text-base text-blue-400">{elem.bData}</h3>
                         </div>
                         <div className="px-2 py-3">
-                          <h2 className="text-[#727070] text-lg font-bold">
+                          <h2 className="text-[#white] text-lg font-bold">
                             Extra Benefits
                           </h2>
-                          <h3 className="text-base text-black">
+                          <h3 className="text-base text-blue-400">
                             {elem.eBenefits}
                           </h3>
                         </div>
                       </div>
                     </div>
-                    <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                    <button className="absolute -right-4 bottom-1 bg-[#083DE0] px-10 py-2 rounded-full text-base pr-28">
                       Avail Now
                       <FaExternalLinkAlt className="inline-block ml-5" />
                     </button>
@@ -631,68 +602,68 @@ function PayBills() {
               return (
                 <div
                   key={index}
-                  className="h-64 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+                  className="h-64 w-80 bg-[#1E1E1E] rounded-lg relative overflow-hidden"
                 >
-                  <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                  <div className="border-b-2 border-b-[#C8D3F6] px-3 py-1 bg-[#003BFF] h-16 flex justify-between gap-2">
                     <div className="w-[40%]">
-                      <h2 className="text-black text-lg font-extrabold">
+                      <h2 className="text-white text-lg font-extrabold">
                         ₹{elem.price}
                       </h2>
-                      <h3 className="text-blue-600 text-base">View Details</h3>
+                      <h3 className="text-white text-base">View Details</h3>
                     </div>
                     <div className="w-[45%]">
-                      <h2 className="text-base font-bold text-right text-red-600">
+                      <h2 className="text-base font-bold text-right text-[#39FF14]">
                         Unlimited Voice Call Facility
                       </h2>
                     </div>
                   </div>
-                  <div className="h-fit flex justify-between">
+                  <div className="h-fit flex justify-between px-3 py-1">
                     <div className="w-[45%] flex flex-col gap-2">
                       <div className="px-2 py-1">
-                        <h2 className="text-[#727070] text-lg font-bold">
+                        <h2 className="text-[#white] text-lg font-bold">
                           Validity
                         </h2>
-                        <h3 className="text-base text-black">
+                        <h3 className="text-base text-blue-400">
                           {elem.validity}
                         </h3>
                       </div>
                       <div className="px-2 py-1">
-                        <h2 className="text-[#727070] text-lg font-bold">
+                        <h2 className="text-white text-lg font-bold">
                           Subscriptions
                         </h2>
-                        <div className="text-black text-md flex item-center gap-2">
+                        <div className="text-white text-md flex item-center gap-2">
                           <div className="flex">
                             <SiNetflix
                               size={"2em"}
-                              className="inline-block p-1 border-2 border-black rounded-full"
+                              className="inline-block p-1 border-2 border-white rounded-full"
                             />
                             <RiMovie2Fill
                               size={"2em"}
-                              className="inline-block p-1 border-2 border-black rounded-full"
+                              className="inline-block p-1 border-2 border-white rounded-full"
                             />
                           </div>
-                          <h3 className="text-base">+{elem.subscriptions}</h3>
+                          <h3 className="text-base text-blue-400">+{elem.subscriptions}</h3>
                         </div>
                       </div>
                     </div>
                     <div className="w-[35%] flex flex-col gap-2">
                       <div className="px-2 py-1">
-                        <h2 className="text-[#727070] text-lg font-bold">
+                        <h2 className="text-[#white] text-lg font-bold">
                           Speed
                         </h2>
-                        <h3 className="text-base text-black">
+                        <h3 className="text-base text-blue-400">
                           {elem.speed}MB/sec
                         </h3>
                       </div>
                       <div className="px-2 py-1">
-                        <h2 className="text-[#727070] text-lg font-bold">
+                        <h2 className="text-[#white] text-lg font-bold">
                           Data
                         </h2>
-                        <h3 className="text-base text-black">{elem.data}</h3>
+                        <h3 className="text-base text-blue-400">{elem.data}</h3>
                       </div>
                     </div>
                   </div>
-                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-22">
                     Recharge Now
                     <FaExternalLinkAlt className="inline-block ml-5" />
                   </button>

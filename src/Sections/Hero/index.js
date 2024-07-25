@@ -41,7 +41,7 @@ const Blobs = styled.div`
 `;
 
 const PinkBlob = styled.div`
-  width: calc(15% + 15vw);
+  width: calc(15% + 12vw);
   position: absolute;
   right: 0;
   top: calc(5rem + 5vw);
