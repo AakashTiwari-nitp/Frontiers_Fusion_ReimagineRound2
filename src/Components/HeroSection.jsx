@@ -13,6 +13,7 @@ import p7 from "../assets/p7.png";
 import p8 from "../assets/p8.png";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import { FaUserCircle } from 'react-icons/fa';
 // import gsap from "gsap";
 
 const images = [p1, p2, p3, p4, p5, p6, p7, p8];
@@ -164,12 +165,13 @@ function HeroSection() {
             </ul>
           </div>
           <div className="navbar-right flex">
-            <button
-              type="button"
-              className="account-button bg-[#0039a6] text-white px-4 py-2 rounded-md font-bold mr-3"
-            >
-              My Account
-            </button>
+           <button
+      type="button"
+      className="account-button bg-[#0039a6] text-white px-4 py-2 rounded-md font-bold flex items-center"
+    >
+      <FaUserCircle className="mr-2" /> 
+       Account
+    </button>
             <button
               className="menu-toggle block lg:hidden text-white"
               aria-label="Toggle menu"
