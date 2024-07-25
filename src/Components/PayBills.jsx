@@ -396,7 +396,7 @@ function PayBills() {
                         <h3 className="text-lg font-sans">{elem.data}</h3>
                       </div>
                     </div>
-                    <button className="text-lg w-3/4 py-2 mt-5 bg-slate-300 text-black font-semibold rounded-full text-center">
+                    <button id="paybutton" className="text-lg w-3/4 py-2 mt-5 bg-slate-300 text-black font-semibold rounded-full text-center">
                       Recharge
                       <MdElectricBolt
                         className="inline-block pr-1"
