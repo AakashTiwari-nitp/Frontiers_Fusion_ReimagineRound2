@@ -19,7 +19,6 @@ const Home = () => {
     <Container>
       <HeroSection />
       <About />
-     
     </Container>
   );
 };

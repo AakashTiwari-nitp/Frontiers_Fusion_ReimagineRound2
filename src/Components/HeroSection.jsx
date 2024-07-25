@@ -251,7 +251,7 @@ function HeroSection() {
           </div>
           <button
             onClick={handleRightClick}
-            className="absolute right-3 top-1/3 transform -translate-y-1/2  text-black z-20 rounded-full "
+            className="absolute right-2 top-1/3 transform -translate-y-1/2 p-4 text-black z-20 rounded-full"
           >
             <FaRegArrowAltCircleRight className="text-white" size={"2em"} />
           </button>

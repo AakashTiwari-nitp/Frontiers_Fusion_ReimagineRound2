@@ -255,12 +255,7 @@ function PayBills() {
               Postpaid
             </button>
           </div>
-          <div class="relative bottom-14 w-24 left-80 bg-[#2e14c484]  mt-5 mb-4 py-2 px-3 rounded-lg ">
-          <button >
-            View bill
-            </button>
-          </div>
-          <div class="relative mt-5 mr-16 bottom-14">
+          <div class="relative mt-5 mr-16">
             {/* input for prepaid */}
             <div className={`${paid ? "hidden" : ""}`}>
               <input
@@ -270,7 +265,7 @@ function PayBills() {
                 required
               />
               <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-yellow-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-yellow-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-yellow-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Enter the Fiber Number:
+                Enter the Number:
               </label>
             </div>
             {/* input for postpaid */}
@@ -282,11 +277,11 @@ function PayBills() {
                 required
               />
               <label class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-yellow-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-yellow-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-yellow-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
-                Enter the Fiber Number:
+                Enter the Number:
               </label>
             </div>
           </div>
-          <button className="text-center  bg-orange-400 hover:bg-blue-400  py-2 px-3 rounded-lg">
+          <button className="text-center text-white bg-orange-400 hover:bg-[#00000084]  mt-5 mb-4 py-2 px-3 rounded-lg">
             Recharge
             <MdElectricBolt className="inline-block pr-1" size={"1.5em"} />
           </button>
@@ -623,81 +618,87 @@ function PayBills() {
       </div>
 
       {/* Plans for fiber */}
-      <div className={`${device ? "w-full h-80 bg-[#111]" : "hidden"}`}>
-        <div className="text-center text-white mb-10">
-          <h1 className="text-3xl font-extrabold">Best Fiber Plans</h1>
-        </div>
-        <div
-          className={`w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5}`}
-        >
-          {fiberPlans.map((elem, index) => {
-            return (
-              <div
-                key={index}
-                className="h-64 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
-              >
-                <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
-                  <div className="w-[40%]">
-                    <h2 className="text-black text-lg font-extrabold">
-                      ₹{elem.price}
-                    </h2>
-                    <h3 className="text-blue-600 text-base">View Details</h3>
-                  </div>
-                  <div className="w-[45%]">
-                    <h2 className="text-base font-bold text-right text-red-600">
-                      Unlimited Voice Call Facility
-                    </h2>
-                  </div>
-                </div>
-                <div className="h-fit flex justify-between">
-                  <div className="w-[45%] flex flex-col gap-2">
-                    <div className="px-2 py-1">
-                      <h2 className="text-[#727070] text-lg font-bold">
-                        Validity
+      <div>
+        <div className={`${device ? "w-full h-fit m-3 bg-[#111]" : "hidden"}`}>
+          <div className="text-center text-white mb-10">
+            <h1 className="text-3xl font-extrabold">Best Fiber Plans</h1>
+          </div>
+          <div
+            className={`w-full h-fit bg-[#111] text-white flex justify-evenly flex-wrap gap-5 }`}
+          >
+            {fiberPlans.map((elem, index) => {
+              return (
+                <div
+                  key={index}
+                  className="h-64 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+                >
+                  <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                    <div className="w-[40%]">
+                      <h2 className="text-black text-lg font-extrabold">
+                        ₹{elem.price}
                       </h2>
-                      <h3 className="text-base text-black">{elem.validity}</h3>
+                      <h3 className="text-blue-600 text-base">View Details</h3>
                     </div>
-                    <div className="px-2 py-1">
-                      <h2 className="text-[#727070] text-lg font-bold">
-                        Subscriptions
+                    <div className="w-[45%]">
+                      <h2 className="text-base font-bold text-right text-red-600">
+                        Unlimited Voice Call Facility
                       </h2>
-                      <div className="text-black text-md flex item-center gap-2">
-                        <div className="flex">
-                          <SiNetflix
-                            size={"2em"}
-                            className="inline-block p-1 border-2 border-black rounded-full"
-                          />
-                          <RiMovie2Fill
-                            size={"2em"}
-                            className="inline-block p-1 border-2 border-black rounded-full"
-                          />
+                    </div>
+                  </div>
+                  <div className="h-fit flex justify-between">
+                    <div className="w-[45%] flex flex-col gap-2">
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#727070] text-lg font-bold">
+                          Validity
+                        </h2>
+                        <h3 className="text-base text-black">
+                          {elem.validity}
+                        </h3>
+                      </div>
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#727070] text-lg font-bold">
+                          Subscriptions
+                        </h2>
+                        <div className="text-black text-md flex item-center gap-2">
+                          <div className="flex">
+                            <SiNetflix
+                              size={"2em"}
+                              className="inline-block p-1 border-2 border-black rounded-full"
+                            />
+                            <RiMovie2Fill
+                              size={"2em"}
+                              className="inline-block p-1 border-2 border-black rounded-full"
+                            />
+                          </div>
+                          <h3 className="text-base">+{elem.subscriptions}</h3>
                         </div>
-                        <h3 className="text-base">+{elem.subscriptions}</h3>
+                      </div>
+                    </div>
+                    <div className="w-[35%] flex flex-col gap-2">
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#727070] text-lg font-bold">
+                          Speed
+                        </h2>
+                        <h3 className="text-base text-black">
+                          {elem.speed}MB/sec
+                        </h3>
+                      </div>
+                      <div className="px-2 py-1">
+                        <h2 className="text-[#727070] text-lg font-bold">
+                          Data
+                        </h2>
+                        <h3 className="text-base text-black">{elem.data}</h3>
                       </div>
                     </div>
                   </div>
-                  <div className="w-[35%] flex flex-col gap-2">
-                    <div className="px-2 py-1">
-                      <h2 className="text-[#727070] text-lg font-bold">
-                        Speed
-                      </h2>
-                      <h3 className="text-base text-black">{elem.speed}MB/sec</h3>
-                    </div>
-                    <div className="px-2 py-1">
-                      <h2 className="text-[#727070] text-lg font-bold">
-                        Data
-                      </h2>
-                      <h3 className="text-base text-black">{elem.data}</h3>
-                    </div>
-                  </div>
+                  <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                    Recharge Now
+                    <FaExternalLinkAlt className="inline-block ml-5" />
+                  </button>
                 </div>
-                <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
-                  Recharge Now
-                  <FaExternalLinkAlt className="inline-block ml-5" />
-                </button>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
 

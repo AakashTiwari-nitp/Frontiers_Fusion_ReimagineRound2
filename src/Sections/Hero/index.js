@@ -5,8 +5,8 @@ import styled, { keyframes } from "styled-components";
 import pinkBlob from "../../assets1/blobPink.png";
 import purpleBlob from "../../assets1/blob purple.png";
 import whiteBlob from "../../assets1/blob white.png";
-import arrow from "../../assets1/Arrow Right.svg";
 import Mobile from "../../assets1/mobile.svg";
+import { BsArrow90DegRight } from "react-icons/bs";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -193,13 +193,13 @@ const HeroSection = () => {
             <Circle />
             <span>Mobile App Available</span>
           </Topic>
-          <Title>Experience New BSNL App</Title>
+          <Title>Stay Ahead with the New BSNL App</Title>
           <SubText>
-          Download the App for exclusive offers, manage your account and much more, on-the-go.
+          Download today for exclusive perks, efficient account handling, and instant access anywhere.
           </SubText>
-          <CTA>
+          <CTA className="text-white">
             Scan QR &nbsp;
-            <img src={arrow} alt="cta" width="100" height="100" />
+            <BsArrow90DegRight className="text-white" size={"2em"} />
           </CTA>
         </Lb>
 
