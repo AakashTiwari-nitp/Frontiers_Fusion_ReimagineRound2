@@ -1,16 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-}
+
 
 .wrapper{
     background: black;
-    width: 100%;
-    height: 823px;
+    min-height: 100vh; /* Use viewport height for full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +17,7 @@ html, body{
 .loader{
     width: 8rem;
     justify-content: center;
+    
 }
 
 .loading-animation__path{
@@ -29,6 +28,9 @@ html, body{
     stroke-dashoffset: 500;
     animation: stroke 4s linear infinite;
     justify-content: center;
+    width: 100%; /* Ensure SVG takes full width of its container */
+    max-width: 320px; /* Set maximum width for better scaling */
+    height: auto; /* Allow SVG to scale proportionally */
 }
 
 @keyframes stroke {
