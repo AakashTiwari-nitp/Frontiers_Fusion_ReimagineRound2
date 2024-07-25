@@ -4,6 +4,7 @@ import { BiSupport } from "react-icons/bi";
 import { IoIosChatbubbles } from "react-icons/io";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoStorefront } from "react-icons/io5";
+import './Footer.css'
 
 function Footer() {
   return (
@@ -14,25 +15,25 @@ function Footer() {
         </h1>
         <h2 className="text-xl mt-2">It's Our Pleasure to help You!</h2>
         <div className="flex justify-around py-5 flex-wrap sm:flex-row flex-col px-10 sm:px-0 gap-3 sm:gap-0">
-          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+          <h2 id="footerbutton" className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
             <BiSupport className="inline-block pr-1" size={"1.5em"} />
             Support
           </h2>
-          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+          <h2 id="footerbutton" className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
             <IoIosChatbubbles className="inline-block pr-1" size={"1.5em"} />
             Chat with Us
           </h2>
-          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+          <h2 id="footerbutton"  className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
             <FiPhoneCall className="inline-block pr-1" size={"1.5em"} />
             Call Us
           </h2>
-          <h2 className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
+          <h2 id="footerbutton" className=" bg-[#584BEF] text-lg rounded-lg border-sky-200 border-2 px-2">
             <IoStorefront className="inline-block pr-1" size={"1.5em"} />
             Store
           </h2>
         </div>
       </div>
-      <div className=" w-full flex sm:justify-around justify-start pt-5 pb-10 flex-wrap px-5 gap-10 sm:gap-5 sm:px-2 md:gap-0">
+      <div  className=" w-full flex sm:justify-around justify-start pt-5 pb-10 flex-wrap px-5 gap-10 sm:gap-5 sm:px-2 md:gap-0">
         <div className="text-white text-left">
           <h1 className="text-xl font-semibold text-[#666] mb-3">
             Quick Access
