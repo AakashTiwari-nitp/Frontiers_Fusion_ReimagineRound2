@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import p1 from "../assets/p1.jpg";
-import p2 from "../assets/p2.jpg";
+import m from "../assets/m.png";
+import r from "../assets/r.png";
+import t from "../assets/t.png";
+import as from "../assets/as.png";
+import b from "../assets/b.png";
+import s from "../assets/s.png";
+import tt from "../assets/tt.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './OfferSection.css'
@@ -52,34 +57,39 @@ function OfferSection() {
 
   const offers = [
     {
-      img: p2,
+      img: m,
       head: "Unmissable Mobile Deals",
       content: "Experience superior connectivity with our exclusive offers",
     },
     {
-      img: p1,
+      img: t,
       head: "Empower with BSNL",
       content: "Register for Bharat-Net Udyami and lead the digital revolution with BSNL to bring seamless connectivity",
     },
     {
-      img: p2,
+      img: tt,
       head: "Learn with BSNL",
       content: "Elevate your career with our industry-oriented telecom courses",
     },
     {
-      img: p1,
+      img: as,
       head: "Strategic Locations for You",
       content: "Lease or buy prime BSNL properties now!",
     },
     {
-      img: p2,
+      img: b,
       head: "Stay Connected Always",
       content: "Upgrade to lightning-fast fiber broadband and stay ahead",
     },
     {
-      img: p2,
+      img: s,
       head: "Seamless connectivity",
       content: "Get consistent and reliable coverage throughout Delhi and NCR",
+    },
+    {
+      img: r,
+      head: "Registration",
+      content: "BSNL partner/BharatNet Udyami Registration",
     },
   ];
 
@@ -106,7 +116,7 @@ function OfferSection() {
                   alt=""
                 />
               </div>
-              <div id="offercontent" className="p-2 pb-2 text-white text-center">
+              <div className="p-2 pb-2 text-white text-center">
                 <h1 className="text-xl font-extrabold tracking-wide">
                   {elem.head}
                 </h1>
