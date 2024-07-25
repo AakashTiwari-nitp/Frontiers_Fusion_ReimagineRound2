@@ -1,5 +1,6 @@
 #neon-hover:hover {
-    border-color: #1eff00; /* Neon green border color */
-    transform: translateY(-5px); /* Translate content up by 5px */
-    transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    border-color: #1eff00; 
+    transform: translateY(-5px); 
+    transition: border-color 0.3s ease, transform 0.3s ease; 
+    cursor: pointer;
   }
