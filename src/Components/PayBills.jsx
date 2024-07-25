@@ -16,12 +16,12 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 function PayBills() {
   const familyPrePlans = [
     {
-      price: 399,
-      validity: "65 Days",
-      bData: "75GB/Plan",
-      connection: "1",
+      price: 799,
+      validity: "30 Days",
+      bData: "100GB/Plan",
+      connection: "2",
       subscriptions: "2",
-      eBenefits: "20 Sms/Day",
+      eBenefits: "200GB RollOver",
     },
     {
       price: 599,
@@ -38,6 +38,57 @@ function PayBills() {
       connection: "2",
       subscriptions: "3",
       eBenefits: "20 Sms/Day",
+    },
+  ];
+
+  const familyPostPlans = [
+    {
+      price: 799,
+      validity: "30 Days",
+      bData: "100GB/Plan",
+      connection: "2",
+      subscriptions: "2",
+      eBenefits: "200GB RollOver",
+    },
+    {
+      price: 1199,
+      validity: "30 Days",
+      bData: "150GB/Plan",
+      connection: "3",
+      subscriptions: "3",
+      eBenefits: "300GB RollOver",
+    },
+    {
+      price: 1599,
+      validity: "30 Days",
+      bData: "200GB/Plan",
+      connection: "4",
+      subscriptions: "4",
+      eBenefits: "500GB RollOver",
+    },
+  ];
+
+  const fiberPlans = [
+    {
+      price: 599,
+      validity: "30 Days",
+      speed: "60",
+      subscriptions: "2",
+      data: "3.3TB",
+    },
+    {
+      price: 999,
+      validity: "30 Days",
+      speed: "200",
+      subscriptions: "3",
+      data: "4TB",
+    },
+    {
+      price: 2499,
+      validity: "30 Days",
+      speed: "500",
+      subscriptions: "4",
+      data: "5TB",
     },
   ];
 
@@ -238,18 +289,36 @@ function PayBills() {
       </div>
 
       {/* Plans for mobile */}
-      <div className={`${device? "hidden" : "w-full h-fit bg-[#111]"}`}>
+      <div className={`${device ? "hidden" : "w-full h-fit bg-[#111]"}`}>
         <div className="text-center mb-10">
-          <button onClick={()=>{handleIndiClick()}} className={`px-3 py-1 text-lg font-semibold ${Family? "bg-black text-white" : "bg-[#D9D9D9] text-black rounded-lg"} mx-5 mt-4`}>
+          <button
+            onClick={() => {
+              handleIndiClick();
+            }}
+            className={`px-3 py-1 text-lg font-semibold ${
+              Family
+                ? "bg-black text-white"
+                : "bg-[#D9D9D9] text-black rounded-lg"
+            } mx-5 mt-4`}
+          >
             Individual Plans
           </button>
-          <button onClick={()=>{handleFamilyClick()}} className={`px-3 py-1 text-lg font-semibold ${Family? "bg-[#D9D9D9] text-black rounded-lg" : "bg-black text-white"}`}>
+          <button
+            onClick={() => {
+              handleFamilyClick();
+            }}
+            className={`px-3 py-1 text-lg font-semibold ${
+              Family
+                ? "bg-[#D9D9D9] text-black rounded-lg"
+                : "bg-black text-white"
+            }`}
+          >
             Family Plans
           </button>
         </div>
 
         {/* Individual Plans */}
-        <div className={`${Family? "hidden" : ""}`}>
+        <div className={`${Family ? "hidden" : ""}`}>
           <div className={`${paid ? "" : "hidden"}`}>
             <div className="text-center text-white mt-10 mb-10">
               <h1 className="text-3xl font-extrabold">Best Postpaid Plans</h1>
@@ -341,91 +410,293 @@ function PayBills() {
         </div>
 
         {/* Family Plans */}
-        <div className={`${Family? "" : "hidden"}`}>
-        <div className="w-full h-fit bg-[#111]">
-      <div className="text-center text-white mt-10 mb-10">
-        <h1 className="text-3xl font-extrabold">Best Family Plans</h1>
-      </div>
-      <div className="w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5">
-        {familyPrePlans.map((elem, index) => {
-          return (
-            <div key={index} className="h-80 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden">
-              <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
-                <div className="w-[40%]">
-                  <h2 className="text-black text-lg font-extrabold">₹{elem.price}</h2>
-                  <h3 className="text-blue-600 text-base">View Details</h3>
-                </div>
-                <div className="w-[45%]">
-                  <h2 className="text-base font-bold text-right text-red-600">
-                    Unlimited Voice Call Facility
-                  </h2>
-                </div>
-              </div>
-              <div className="h-fit flex justify-between">
-                <div className="w-[45%] flex flex-col gap-2">
-                  <div className="px-2 py-1">
-                    <h2 className="text-[#727070] text-lg font-bold">
-                      Connections
-                    </h2>
-                    <div className="text-black text-md flex item-center gap-2">
-                      <CgProfile size={"2.5em"} className="inline-block" />
-                      <h3 className="">{elem.connection} Additional Family SIM</h3>
-                    </div>
-                  </div>
-                  <div className="px-2 py-1">
-                    <h2 className="text-[#727070] text-lg font-bold">
-                      Validity
-                    </h2>
-                    <h3 className="text-base text-black">{elem.validity}</h3>
-                  </div>
-                  <div className="px-2 py-1">
-                    <h2 className="text-[#727070] text-lg font-bold">
-                      Subscriptions
-                    </h2>
-                    <div className="text-black text-md flex item-center gap-2">
-                      <div className="flex">
-                        <SiNetflix
-                          size={"2em"}
-                          className="inline-block p-1 border-2 border-black rounded-full"
-                        />
-                        <RiMovie2Fill
-                          size={"2em"}
-                          className="inline-block p-1 border-2 border-black rounded-full"
-                        />
-                      </div>
-                      <h3 className="text-base">+{elem.subscriptions}</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-[35%] flex flex-col gap-2">
-                  <div className="px-2 py-3">
-                    <h2 className="text-[#727070] text-lg font-bold">
-                      Benefits
-                    </h2>
-                    <h3 className="text-base text-black">{elem.bData}</h3>
-                  </div>
-                  <div className="px-2 py-3">
-                    <h2 className="text-[#727070] text-lg font-bold">
-                      Extra Benefits
-                    </h2>
-                    <h3 className="text-base text-black">{elem.eBenefits}</h3>
-                  </div>
-                </div>
-              </div>
-              <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
-                Avail Now
-                <FaExternalLinkAlt className="inline-block ml-5" />
-              </button>
+        <div className={`${Family ? "" : "hidden"}`}>
+          <div className="w-full h-fit bg-[#111]">
+            <div className="text-center text-white mt-10 mb-10">
+              <h1 className="text-3xl font-extrabold">
+                Best {paid ? "PostPaid" : "PrePaid"} Family Plans
+              </h1>
             </div>
-          );
-        })}
-      </div>
-    </div>
+
+            {/* Family Prepaid Plans */}
+            <div
+              className={`${
+                paid
+                  ? "hidden"
+                  : "w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5"
+              }`}
+            >
+              {familyPrePlans.map((elem, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="h-80 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+                  >
+                    <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                      <div className="w-[40%]">
+                        <h2 className="text-black text-lg font-extrabold">
+                          ₹{elem.price}
+                        </h2>
+                        <h3 className="text-blue-600 text-base">
+                          View Details
+                        </h3>
+                      </div>
+                      <div className="w-[45%]">
+                        <h2 className="text-base font-bold text-right text-red-600">
+                          Unlimited Voice Call Facility
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="h-fit flex justify-between">
+                      <div className="w-[45%] flex flex-col gap-2">
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Connections
+                          </h2>
+                          <div className="text-black text-md flex item-center gap-2">
+                            <CgProfile
+                              size={"2.5em"}
+                              className="inline-block"
+                            />
+                            <h3 className="">
+                              {elem.connection} Additional Family SIM
+                            </h3>
+                          </div>
+                        </div>
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Validity
+                          </h2>
+                          <h3 className="text-base text-black">
+                            {elem.validity}
+                          </h3>
+                        </div>
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Subscriptions
+                          </h2>
+                          <div className="text-black text-md flex item-center gap-2">
+                            <div className="flex">
+                              <SiNetflix
+                                size={"2em"}
+                                className="inline-block p-1 border-2 border-black rounded-full"
+                              />
+                              <RiMovie2Fill
+                                size={"2em"}
+                                className="inline-block p-1 border-2 border-black rounded-full"
+                              />
+                            </div>
+                            <h3 className="text-base">+{elem.subscriptions}</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-[35%] flex flex-col gap-2">
+                        <div className="px-2 py-3">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Benefits
+                          </h2>
+                          <h3 className="text-base text-black">{elem.bData}</h3>
+                        </div>
+                        <div className="px-2 py-3">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Extra Benefits
+                          </h2>
+                          <h3 className="text-base text-black">
+                            {elem.eBenefits}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                      Avail Now
+                      <FaExternalLinkAlt className="inline-block ml-5" />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Family PostPaid Plans */}
+            <div
+              className={`${
+                paid
+                  ? "w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5"
+                  : "hidden"
+              }`}
+            >
+              {familyPostPlans.map((elem, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="h-80 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+                  >
+                    <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                      <div className="w-[40%]">
+                        <h2 className="text-black text-lg font-extrabold">
+                          ₹{elem.price}
+                        </h2>
+                        <h3 className="text-blue-600 text-base">
+                          View Details
+                        </h3>
+                      </div>
+                      <div className="w-[45%]">
+                        <h2 className="text-base font-bold text-right text-red-600">
+                          Unlimited Voice Call Facility
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="h-fit flex justify-between">
+                      <div className="w-[45%] flex flex-col gap-2">
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Connections
+                          </h2>
+                          <div className="text-black text-md flex item-center gap-2">
+                            <CgProfile
+                              size={"2.5em"}
+                              className="inline-block"
+                            />
+                            <h3 className="">
+                              {elem.connection} Additional Family SIM
+                            </h3>
+                          </div>
+                        </div>
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Validity
+                          </h2>
+                          <h3 className="text-base text-black">
+                            {elem.validity}
+                          </h3>
+                        </div>
+                        <div className="px-2 py-1">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Subscriptions
+                          </h2>
+                          <div className="text-black text-md flex item-center gap-2">
+                            <div className="flex">
+                              <SiNetflix
+                                size={"2em"}
+                                className="inline-block p-1 border-2 border-black rounded-full"
+                              />
+                              <RiMovie2Fill
+                                size={"2em"}
+                                className="inline-block p-1 border-2 border-black rounded-full"
+                              />
+                            </div>
+                            <h3 className="text-base">+{elem.subscriptions}</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="w-[35%] flex flex-col gap-2">
+                        <div className="px-2 py-3">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Benefits
+                          </h2>
+                          <h3 className="text-base text-black">{elem.bData}</h3>
+                        </div>
+                        <div className="px-2 py-3">
+                          <h2 className="text-[#727070] text-lg font-bold">
+                            Extra Benefits
+                          </h2>
+                          <h3 className="text-base text-black">
+                            {elem.eBenefits}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                      Avail Now
+                      <FaExternalLinkAlt className="inline-block ml-5" />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Plans for fiber */}
-      <div className={`${device? "-full h-80 bg-[#111]" : "hidden"}`}></div>
+      <div className={`${device ? "w-full h-80 bg-[#111]" : "hidden"}`}>
+        <div className="text-center text-white mb-10">
+          <h1 className="text-3xl font-extrabold">Best Fiber Plans</h1>
+        </div>
+        <div
+          className={`w-full bg-[#111] text-white flex justify-evenly flex-wrap gap-5}`}
+        >
+          {fiberPlans.map((elem, index) => {
+            return (
+              <div
+                key={index}
+                className="h-64 w-80 bg-[#E3E9FD] px-3 py-1 rounded-lg relative overflow-hidden"
+              >
+                <div className="border-b-2 border-b-[#C8D3F6] h-16 flex justify-between gap-2">
+                  <div className="w-[40%]">
+                    <h2 className="text-black text-lg font-extrabold">
+                      ₹{elem.price}
+                    </h2>
+                    <h3 className="text-blue-600 text-base">View Details</h3>
+                  </div>
+                  <div className="w-[45%]">
+                    <h2 className="text-base font-bold text-right text-red-600">
+                      Unlimited Voice Call Facility
+                    </h2>
+                  </div>
+                </div>
+                <div className="h-fit flex justify-between">
+                  <div className="w-[45%] flex flex-col gap-2">
+                    <div className="px-2 py-1">
+                      <h2 className="text-[#727070] text-lg font-bold">
+                        Validity
+                      </h2>
+                      <h3 className="text-base text-black">{elem.validity}</h3>
+                    </div>
+                    <div className="px-2 py-1">
+                      <h2 className="text-[#727070] text-lg font-bold">
+                        Subscriptions
+                      </h2>
+                      <div className="text-black text-md flex item-center gap-2">
+                        <div className="flex">
+                          <SiNetflix
+                            size={"2em"}
+                            className="inline-block p-1 border-2 border-black rounded-full"
+                          />
+                          <RiMovie2Fill
+                            size={"2em"}
+                            className="inline-block p-1 border-2 border-black rounded-full"
+                          />
+                        </div>
+                        <h3 className="text-base">+{elem.subscriptions}</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-[35%] flex flex-col gap-2">
+                    <div className="px-2 py-1">
+                      <h2 className="text-[#727070] text-lg font-bold">
+                        Speed
+                      </h2>
+                      <h3 className="text-base text-black">{elem.speed}MB/sec</h3>
+                    </div>
+                    <div className="px-2 py-1">
+                      <h2 className="text-[#727070] text-lg font-bold">
+                        Data
+                      </h2>
+                      <h3 className="text-base text-black">{elem.data}</h3>
+                    </div>
+                  </div>
+                </div>
+                <button className="absolute -right-4 bottom-1 bg-blue-600 px-10 py-2 rounded-full text-base pr-28">
+                  Recharge Now
+                  <FaExternalLinkAlt className="inline-block ml-5" />
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* New Connection */}
       <div className="w-full pb-10 bg-[#111] text-white text-center">
         <h1 className="mt-10 text-white text-center text-2xl font-bold tracking-wide">
           Buy a New Connection
